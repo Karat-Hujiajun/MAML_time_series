@@ -1,0 +1,635 @@
+2023-02-13 16:31:34,421 INFO line:184 - Namespace(check_point='maml_init_params_epoch-5000_metalr-0.001_updatelr-0.1_v1_8_2.pt', clip_val=1.0, echo_step=10, epoch=5000, eval=True, eval_step=100, figure_dir='./fsl_figures/maml', k_qry=16, k_spt=4, logs_dir='./fsl_logs/maml', meta_lr=0.001, model_params_dir='./fsl_model_params/maml', n_way=3, no_cuda=False, pred=True, task_num=16, task_num_eval=16, task_num_test=16, test=True, train=True, update_lr=0.1, update_step=10, update_step_test=10)
+------meta_train------
+ETTh1_train: x_spt_shape (400, 4, 16, 7), x_spt_mark_shape (400, 4, 16, 4), y_spt_shape (400, 4, 4, 7), y_spt_mark_shape (400, 4, 4, 4), x_qry_shape (1600, 4, 16, 7), x_qry_mark_shape (1600, 4, 16, 4), y_qry_shape (1600, 4, 4, 7), y_qry_mark_shape (1600, 4, 4, 4),
+ETTh2_train: x_spt_shape (400, 4, 16, 7), x_spt_mark_shape (400, 4, 16, 4), y_spt_shape (400, 4, 4, 7), y_spt_mark_shape (400, 4, 4, 4), x_qry_shape (1600, 4, 16, 7), x_qry_mark_shape (1600, 4, 16, 4), y_qry_shape (1600, 4, 4, 7), y_qry_mark_shape (1600, 4, 4, 4),
+ETTm1_train: x_spt_shape (400, 4, 16, 7), x_spt_mark_shape (400, 4, 16, 5), y_spt_shape (400, 4, 4, 7), y_spt_mark_shape (400, 4, 4, 5), x_qry_shape (1600, 4, 16, 7), x_qry_mark_shape (1600, 4, 16, 5), y_qry_shape (1600, 4, 4, 7), y_qry_mark_shape (1600, 4, 4, 5),
+ETTm2_train: x_spt_shape (400, 4, 16, 7), x_spt_mark_shape (400, 4, 16, 5), y_spt_shape (400, 4, 4, 7), y_spt_mark_shape (400, 4, 4, 5), x_qry_shape (1600, 4, 16, 7), x_qry_mark_shape (1600, 4, 16, 5), y_qry_shape (1600, 4, 4, 7), y_qry_mark_shape (1600, 4, 4, 5),
+------meta_val------
+ETTh1_val: x_spt_shape (100, 4, 16, 7), x_spt_mark_shape (100, 4, 16, 4), y_spt_shape (100, 4, 4, 7), y_spt_mark_shape (100, 4, 4, 4), x_qry_shape (400, 4, 16, 7), x_qry_mark_shape (400, 4, 16, 4), y_qry_shape (400, 4, 4, 7), y_qry_mark_shape (400, 4, 4, 4),
+ETTh2_val: x_spt_shape (100, 4, 16, 7), x_spt_mark_shape (100, 4, 16, 4), y_spt_shape (100, 4, 4, 7), y_spt_mark_shape (100, 4, 4, 4), x_qry_shape (400, 4, 16, 7), x_qry_mark_shape (400, 4, 16, 4), y_qry_shape (400, 4, 4, 7), y_qry_mark_shape (400, 4, 4, 4),
+ETTm1_val: x_spt_shape (100, 4, 16, 7), x_spt_mark_shape (100, 4, 16, 5), y_spt_shape (100, 4, 4, 7), y_spt_mark_shape (100, 4, 4, 5), x_qry_shape (400, 4, 16, 7), x_qry_mark_shape (400, 4, 16, 5), y_qry_shape (400, 4, 4, 7), y_qry_mark_shape (400, 4, 4, 5),
+ETTm2_val: x_spt_shape (100, 4, 16, 7), x_spt_mark_shape (100, 4, 16, 5), y_spt_shape (100, 4, 4, 7), y_spt_mark_shape (100, 4, 4, 5), x_qry_shape (400, 4, 16, 7), x_qry_mark_shape (400, 4, 16, 5), y_qry_shape (400, 4, 4, 7), y_qry_mark_shape (400, 4, 4, 5),
+------meta_test------
+ETTh1_test: x_spt_shape (100, 4, 16, 7), x_spt_mark_shape (100, 4, 16, 4), y_spt_shape (100, 4, 4, 7), y_spt_mark_shape (100, 4, 4, 4), x_qry_shape (400, 4, 16, 7), x_qry_mark_shape (400, 4, 16, 4), y_qry_shape (400, 4, 4, 7), y_qry_mark_shape (400, 4, 4, 4),
+ETTh2_test: x_spt_shape (100, 4, 16, 7), x_spt_mark_shape (100, 4, 16, 4), y_spt_shape (100, 4, 4, 7), y_spt_mark_shape (100, 4, 4, 4), x_qry_shape (400, 4, 16, 7), x_qry_mark_shape (400, 4, 16, 4), y_qry_shape (400, 4, 4, 7), y_qry_mark_shape (400, 4, 4, 4),
+ETTm1_test: x_spt_shape (100, 4, 16, 7), x_spt_mark_shape (100, 4, 16, 5), y_spt_shape (100, 4, 4, 7), y_spt_mark_shape (100, 4, 4, 5), x_qry_shape (400, 4, 16, 7), x_qry_mark_shape (400, 4, 16, 5), y_qry_shape (400, 4, 4, 7), y_qry_mark_shape (400, 4, 4, 5),
+ETTm2_test: x_spt_shape (100, 4, 16, 7), x_spt_mark_shape (100, 4, 16, 5), y_spt_shape (100, 4, 4, 7), y_spt_mark_shape (100, 4, 4, 5), x_qry_shape (400, 4, 16, 7), x_qry_mark_shape (400, 4, 16, 5), y_qry_shape (400, 4, 4, 7), y_qry_mark_shape (400, 4, 4, 5),
+2023-02-13 16:31:36,704 INFO line:56 -  ------ meta training start ------ 
+2023-02-13 16:31:38,773 INFO line:71 - step: 0, train_loss = 0.8279887883568984
+2023-02-13 16:31:38,774 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 16:31:39,459 INFO line:92 - mean eval loss on 16 meta eval tasks = 1.594413387301742
+2023-02-13 16:31:59,695 INFO line:71 - step: 10, train_loss = 0.8136092049862294
+2023-02-13 16:32:22,292 INFO line:71 - step: 20, train_loss = 0.641077485758638
+2023-02-13 16:32:45,668 INFO line:71 - step: 30, train_loss = 0.6040740449995631
+2023-02-13 16:33:08,242 INFO line:71 - step: 40, train_loss = 0.5753785209349437
+2023-02-13 16:33:30,787 INFO line:71 - step: 50, train_loss = 0.5284142298617649
+2023-02-13 16:33:53,353 INFO line:71 - step: 60, train_loss = 0.5030659107803515
+2023-02-13 16:34:15,935 INFO line:71 - step: 70, train_loss = 0.46790464127967873
+2023-02-13 16:34:38,544 INFO line:71 - step: 80, train_loss = 0.443224535098814
+2023-02-13 16:35:01,150 INFO line:71 - step: 90, train_loss = 0.4007959872856069
+2023-02-13 16:35:23,747 INFO line:71 - step: 100, train_loss = 0.4193902772261519
+2023-02-13 16:35:23,747 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 16:35:24,432 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.911722114724207
+2023-02-13 16:35:47,020 INFO line:71 - step: 110, train_loss = 0.4180253971286758
+2023-02-13 16:36:09,570 INFO line:71 - step: 120, train_loss = 0.3969292535875336
+2023-02-13 16:36:32,143 INFO line:71 - step: 130, train_loss = 0.41804950582621403
+2023-02-13 16:36:54,692 INFO line:71 - step: 140, train_loss = 0.40546119504937056
+2023-02-13 16:37:17,278 INFO line:71 - step: 150, train_loss = 0.41266748661206964
+2023-02-13 16:37:39,847 INFO line:71 - step: 160, train_loss = 0.3739220198113805
+2023-02-13 16:38:02,388 INFO line:71 - step: 170, train_loss = 0.36730747540899583
+2023-02-13 16:38:24,965 INFO line:71 - step: 180, train_loss = 0.35707087179702623
+2023-02-13 16:38:47,537 INFO line:71 - step: 190, train_loss = 0.36670629284544176
+2023-02-13 16:39:10,074 INFO line:71 - step: 200, train_loss = 0.3854405829572126
+2023-02-13 16:39:10,074 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 16:39:10,755 INFO line:92 - mean eval loss on 16 meta eval tasks = 1.016068123754871
+2023-02-13 16:39:33,322 INFO line:71 - step: 210, train_loss = 0.3338924680098644
+2023-02-13 16:39:55,891 INFO line:71 - step: 220, train_loss = 0.33251953252687594
+2023-02-13 16:40:18,460 INFO line:71 - step: 230, train_loss = 0.3568516885542486
+2023-02-13 16:40:40,994 INFO line:71 - step: 240, train_loss = 0.3555122277114493
+2023-02-13 16:41:03,548 INFO line:71 - step: 250, train_loss = 0.329930609741522
+2023-02-13 16:41:26,092 INFO line:71 - step: 260, train_loss = 0.32496507949322606
+2023-02-13 16:41:48,661 INFO line:71 - step: 270, train_loss = 0.30857138997606703
+2023-02-13 16:42:11,226 INFO line:71 - step: 280, train_loss = 0.3174015347182596
+2023-02-13 16:42:33,793 INFO line:71 - step: 290, train_loss = 0.3343594142206582
+2023-02-13 16:42:56,381 INFO line:71 - step: 300, train_loss = 0.3135735412795971
+2023-02-13 16:42:56,381 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 16:42:57,067 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.9433493841138081
+2023-02-13 16:43:19,660 INFO line:71 - step: 310, train_loss = 0.32341964996249367
+2023-02-13 16:43:42,230 INFO line:71 - step: 320, train_loss = 0.3290935231891534
+2023-02-13 16:44:04,799 INFO line:71 - step: 330, train_loss = 0.33492515060480155
+2023-02-13 16:44:27,344 INFO line:71 - step: 340, train_loss = 0.30223261502355475
+2023-02-13 16:44:49,934 INFO line:71 - step: 350, train_loss = 0.29351776088583476
+2023-02-13 16:45:12,466 INFO line:71 - step: 360, train_loss = 0.30265436674858714
+2023-02-13 16:45:34,997 INFO line:71 - step: 370, train_loss = 0.3057618359698087
+2023-02-13 16:45:57,555 INFO line:71 - step: 380, train_loss = 0.324382504220973
+2023-02-13 16:46:20,111 INFO line:71 - step: 390, train_loss = 0.3242465370375871
+2023-02-13 16:46:42,696 INFO line:71 - step: 400, train_loss = 0.29230682793360946
+2023-02-13 16:46:42,696 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 16:46:43,381 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6627984404315872
+2023-02-13 16:47:05,912 INFO line:71 - step: 410, train_loss = 0.30031103103847556
+2023-02-13 16:47:28,469 INFO line:71 - step: 420, train_loss = 0.28667540600098396
+2023-02-13 16:47:51,017 INFO line:71 - step: 430, train_loss = 0.298891837763107
+2023-02-13 16:48:13,557 INFO line:71 - step: 440, train_loss = 0.2868598129885617
+2023-02-13 16:48:36,126 INFO line:71 - step: 450, train_loss = 0.2918995013535387
+2023-02-13 16:48:58,709 INFO line:71 - step: 460, train_loss = 0.29214084452165157
+2023-02-13 16:49:21,263 INFO line:71 - step: 470, train_loss = 0.30273115138155127
+2023-02-13 16:49:43,823 INFO line:71 - step: 480, train_loss = 0.29238899693070397
+2023-02-13 16:50:06,366 INFO line:71 - step: 490, train_loss = 0.28866163089877267
+2023-02-13 16:50:28,901 INFO line:71 - step: 500, train_loss = 0.2841666665478747
+2023-02-13 16:50:28,902 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 16:50:29,592 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.729177930956626
+2023-02-13 16:50:52,144 INFO line:71 - step: 510, train_loss = 0.28770481609163073
+2023-02-13 16:51:14,709 INFO line:71 - step: 520, train_loss = 0.27608014764117644
+2023-02-13 16:51:37,248 INFO line:71 - step: 530, train_loss = 0.3047765637434728
+2023-02-13 16:51:59,782 INFO line:71 - step: 540, train_loss = 0.29841463179947264
+2023-02-13 16:52:22,342 INFO line:71 - step: 550, train_loss = 0.2730570080451314
+2023-02-13 16:52:44,901 INFO line:71 - step: 560, train_loss = 0.262220347060325
+2023-02-13 16:53:07,466 INFO line:71 - step: 570, train_loss = 0.3138894974446747
+2023-02-13 16:53:30,020 INFO line:71 - step: 580, train_loss = 0.2607304742908174
+2023-02-13 16:53:52,546 INFO line:71 - step: 590, train_loss = 0.25812765955126477
+2023-02-13 16:54:15,103 INFO line:71 - step: 600, train_loss = 0.30177944383537314
+2023-02-13 16:54:15,104 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 16:54:15,791 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7149848127484832
+2023-02-13 16:54:38,356 INFO line:71 - step: 610, train_loss = 0.28380925122309564
+2023-02-13 16:55:00,905 INFO line:71 - step: 620, train_loss = 0.29067342223324505
+2023-02-13 16:55:23,446 INFO line:71 - step: 630, train_loss = 0.2886531482607323
+2023-02-13 16:55:45,991 INFO line:71 - step: 640, train_loss = 0.30911312566739024
+2023-02-13 16:56:08,526 INFO line:71 - step: 650, train_loss = 0.2853188529860548
+2023-02-13 16:56:31,094 INFO line:71 - step: 660, train_loss = 0.2686380586282159
+2023-02-13 16:56:53,633 INFO line:71 - step: 670, train_loss = 0.25552839412048745
+2023-02-13 16:57:16,174 INFO line:71 - step: 680, train_loss = 0.28231222263303524
+2023-02-13 16:57:38,724 INFO line:71 - step: 690, train_loss = 0.28410973734938183
+2023-02-13 16:58:01,293 INFO line:71 - step: 700, train_loss = 0.2626824807529463
+2023-02-13 16:58:01,293 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 16:58:01,984 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5992500392727915
+2023-02-13 16:58:24,554 INFO line:71 - step: 710, train_loss = 0.26033831847966094
+2023-02-13 16:58:47,122 INFO line:71 - step: 720, train_loss = 0.27148281245224226
+2023-02-13 16:59:09,687 INFO line:71 - step: 730, train_loss = 0.262896238545565
+2023-02-13 16:59:32,239 INFO line:71 - step: 740, train_loss = 0.26832734756454524
+2023-02-13 16:59:54,796 INFO line:71 - step: 750, train_loss = 0.29562291333054236
+2023-02-13 17:00:17,380 INFO line:71 - step: 760, train_loss = 0.27691319234342193
+2023-02-13 17:00:39,987 INFO line:71 - step: 770, train_loss = 0.287852927377698
+2023-02-13 17:01:02,568 INFO line:71 - step: 780, train_loss = 0.29250625288608495
+2023-02-13 17:01:25,130 INFO line:71 - step: 790, train_loss = 0.2725488699321479
+2023-02-13 17:01:47,667 INFO line:71 - step: 800, train_loss = 0.2875745112358846
+2023-02-13 17:01:47,667 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:01:48,350 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6280297099267627
+2023-02-13 17:02:10,964 INFO line:71 - step: 810, train_loss = 0.2679392927797051
+2023-02-13 17:02:33,493 INFO line:71 - step: 820, train_loss = 0.2566331571695083
+2023-02-13 17:02:56,048 INFO line:71 - step: 830, train_loss = 0.2772521101308178
+2023-02-13 17:03:18,590 INFO line:71 - step: 840, train_loss = 0.26911117384629396
+2023-02-13 17:03:41,168 INFO line:71 - step: 850, train_loss = 0.27707915719886744
+2023-02-13 17:04:03,705 INFO line:71 - step: 860, train_loss = 0.25874488536901075
+2023-02-13 17:04:26,271 INFO line:71 - step: 870, train_loss = 0.2767263612595773
+2023-02-13 17:04:48,826 INFO line:71 - step: 880, train_loss = 0.2703097573225241
+2023-02-13 17:05:11,396 INFO line:71 - step: 890, train_loss = 0.27422284250153095
+2023-02-13 17:05:33,958 INFO line:71 - step: 900, train_loss = 0.2617364347414276
+2023-02-13 17:05:33,959 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:05:34,647 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.597337369227571
+2023-02-13 17:05:57,224 INFO line:71 - step: 910, train_loss = 0.24510656294722916
+2023-02-13 17:06:19,777 INFO line:71 - step: 920, train_loss = 0.29577527930202063
+2023-02-13 17:06:42,376 INFO line:71 - step: 930, train_loss = 0.2639054919669327
+2023-02-13 17:07:04,946 INFO line:71 - step: 940, train_loss = 0.3047556238846988
+2023-02-13 17:07:27,507 INFO line:71 - step: 950, train_loss = 0.26945106388531237
+2023-02-13 17:07:50,140 INFO line:71 - step: 960, train_loss = 0.26617570062539464
+2023-02-13 17:08:12,702 INFO line:71 - step: 970, train_loss = 0.24534298825426104
+2023-02-13 17:08:35,222 INFO line:71 - step: 980, train_loss = 0.26575526407817673
+2023-02-13 17:08:57,757 INFO line:71 - step: 990, train_loss = 0.24616132963421208
+2023-02-13 17:09:20,350 INFO line:71 - step: 1000, train_loss = 0.2561360154556222
+2023-02-13 17:09:20,350 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:09:21,033 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6552411826241359
+2023-02-13 17:09:43,574 INFO line:71 - step: 1010, train_loss = 0.2514967671441935
+2023-02-13 17:10:06,142 INFO line:71 - step: 1020, train_loss = 0.26059749723333836
+2023-02-13 17:10:28,644 INFO line:71 - step: 1030, train_loss = 0.2580997368521317
+2023-02-13 17:10:51,194 INFO line:71 - step: 1040, train_loss = 0.27776316170046994
+2023-02-13 17:11:13,793 INFO line:71 - step: 1050, train_loss = 0.26071853031966075
+2023-02-13 17:11:36,346 INFO line:71 - step: 1060, train_loss = 0.2616911218998854
+2023-02-13 17:11:58,912 INFO line:71 - step: 1070, train_loss = 0.25413743173906056
+2023-02-13 17:12:21,456 INFO line:71 - step: 1080, train_loss = 0.2607466608528668
+2023-02-13 17:12:44,013 INFO line:71 - step: 1090, train_loss = 0.26868861473343475
+2023-02-13 17:13:06,600 INFO line:71 - step: 1100, train_loss = 0.26601169763480625
+2023-02-13 17:13:06,601 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:13:07,281 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7146708445819332
+2023-02-13 17:13:29,841 INFO line:71 - step: 1110, train_loss = 0.25902116766974426
+2023-02-13 17:13:52,420 INFO line:71 - step: 1120, train_loss = 0.24484461606063218
+2023-02-13 17:14:14,994 INFO line:71 - step: 1130, train_loss = 0.25086080926029364
+2023-02-13 17:14:37,564 INFO line:71 - step: 1140, train_loss = 0.2516359149272594
+2023-02-13 17:15:00,101 INFO line:71 - step: 1150, train_loss = 0.24923651331970623
+2023-02-13 17:15:22,644 INFO line:71 - step: 1160, train_loss = 0.2491502683991767
+2023-02-13 17:15:45,181 INFO line:71 - step: 1170, train_loss = 0.25562875653811695
+2023-02-13 17:16:07,729 INFO line:71 - step: 1180, train_loss = 0.2659978736927103
+2023-02-13 17:16:30,299 INFO line:71 - step: 1190, train_loss = 0.2450843870402021
+2023-02-13 17:16:52,830 INFO line:71 - step: 1200, train_loss = 0.24383799155800667
+2023-02-13 17:16:52,830 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:16:53,513 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6934340669178181
+2023-02-13 17:17:16,049 INFO line:71 - step: 1210, train_loss = 0.2581016351673859
+2023-02-13 17:17:38,600 INFO line:71 - step: 1220, train_loss = 0.2401000045804058
+2023-02-13 17:18:01,161 INFO line:71 - step: 1230, train_loss = 0.2573346595272348
+2023-02-13 17:18:23,716 INFO line:71 - step: 1240, train_loss = 0.24917023668707658
+2023-02-13 17:18:46,281 INFO line:71 - step: 1250, train_loss = 0.26306778816832865
+2023-02-13 17:19:08,826 INFO line:71 - step: 1260, train_loss = 0.24135339346481827
+2023-02-13 17:19:31,347 INFO line:71 - step: 1270, train_loss = 0.2460250958373233
+2023-02-13 17:19:53,893 INFO line:71 - step: 1280, train_loss = 0.24692764195886047
+2023-02-13 17:20:16,447 INFO line:71 - step: 1290, train_loss = 0.26223469123243637
+2023-02-13 17:20:39,009 INFO line:71 - step: 1300, train_loss = 0.27641403835444117
+2023-02-13 17:20:39,010 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:20:39,694 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5741820190476079
+2023-02-13 17:21:02,223 INFO line:71 - step: 1310, train_loss = 0.2619988977001036
+2023-02-13 17:21:24,773 INFO line:71 - step: 1320, train_loss = 0.23664811844735936
+2023-02-13 17:21:47,297 INFO line:71 - step: 1330, train_loss = 0.253963233087673
+2023-02-13 17:22:09,829 INFO line:71 - step: 1340, train_loss = 0.2452658296525459
+2023-02-13 17:22:32,376 INFO line:71 - step: 1350, train_loss = 0.25959801845355435
+2023-02-13 17:22:54,938 INFO line:71 - step: 1360, train_loss = 0.2537890317978907
+2023-02-13 17:23:17,490 INFO line:71 - step: 1370, train_loss = 0.24878735326380141
+2023-02-13 17:23:40,033 INFO line:71 - step: 1380, train_loss = 0.25479113798602526
+2023-02-13 17:24:02,572 INFO line:71 - step: 1390, train_loss = 0.2685717119023751
+2023-02-13 17:24:25,117 INFO line:71 - step: 1400, train_loss = 0.24612403602846852
+2023-02-13 17:24:25,117 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:24:25,805 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.744639619662346
+2023-02-13 17:24:48,355 INFO line:71 - step: 1410, train_loss = 0.2692398716613792
+2023-02-13 17:25:10,910 INFO line:71 - step: 1420, train_loss = 0.24523514930080878
+2023-02-13 17:25:33,455 INFO line:71 - step: 1430, train_loss = 0.2568782290949841
+2023-02-13 17:25:56,000 INFO line:71 - step: 1440, train_loss = 0.24127554833581327
+2023-02-13 17:26:18,563 INFO line:71 - step: 1450, train_loss = 0.25235998680101224
+2023-02-13 17:26:41,109 INFO line:71 - step: 1460, train_loss = 0.2563842769676374
+2023-02-13 17:27:03,641 INFO line:71 - step: 1470, train_loss = 0.265070825793579
+2023-02-13 17:27:26,185 INFO line:71 - step: 1480, train_loss = 0.2324244292096958
+2023-02-13 17:27:48,733 INFO line:71 - step: 1490, train_loss = 0.26524226677147195
+2023-02-13 17:28:11,252 INFO line:71 - step: 1500, train_loss = 0.26792896433814495
+2023-02-13 17:28:11,252 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:28:11,935 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7265463034273643
+2023-02-13 17:28:34,498 INFO line:71 - step: 1510, train_loss = 0.25547454936643343
+2023-02-13 17:28:57,065 INFO line:71 - step: 1520, train_loss = 0.26169786844563936
+2023-02-13 17:29:19,669 INFO line:71 - step: 1530, train_loss = 0.24615446581635103
+2023-02-13 17:29:42,197 INFO line:71 - step: 1540, train_loss = 0.2601128100373304
+2023-02-13 17:30:04,780 INFO line:71 - step: 1550, train_loss = 0.2526713116422677
+2023-02-13 17:30:27,429 INFO line:71 - step: 1560, train_loss = 0.2453898883184687
+2023-02-13 17:30:49,970 INFO line:71 - step: 1570, train_loss = 0.24275781703315782
+2023-02-13 17:31:12,557 INFO line:71 - step: 1580, train_loss = 0.2524179886875516
+2023-02-13 17:31:35,107 INFO line:71 - step: 1590, train_loss = 0.24700648639331946
+2023-02-13 17:31:57,664 INFO line:71 - step: 1600, train_loss = 0.25166853359042696
+2023-02-13 17:31:57,664 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:31:58,351 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5945229238257829
+2023-02-13 17:32:20,895 INFO line:71 - step: 1610, train_loss = 0.2527176636014977
+2023-02-13 17:32:43,490 INFO line:71 - step: 1620, train_loss = 0.230824186264238
+2023-02-13 17:33:06,080 INFO line:71 - step: 1630, train_loss = 0.24934238290688754
+2023-02-13 17:33:28,653 INFO line:71 - step: 1640, train_loss = 0.23019565379658893
+2023-02-13 17:33:51,240 INFO line:71 - step: 1650, train_loss = 0.2290944409776373
+2023-02-13 17:34:13,769 INFO line:71 - step: 1660, train_loss = 0.24746886514140246
+2023-02-13 17:34:36,296 INFO line:71 - step: 1670, train_loss = 0.23325012868465525
+2023-02-13 17:34:58,848 INFO line:71 - step: 1680, train_loss = 0.24225527314480363
+2023-02-13 17:35:21,389 INFO line:71 - step: 1690, train_loss = 0.24022298311928472
+2023-02-13 17:35:43,917 INFO line:71 - step: 1700, train_loss = 0.24169507577053467
+2023-02-13 17:35:43,918 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:35:44,602 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7472421875941112
+2023-02-13 17:36:07,086 INFO line:71 - step: 1710, train_loss = 0.24480517471077823
+2023-02-13 17:36:29,612 INFO line:71 - step: 1720, train_loss = 0.23612995262521946
+2023-02-13 17:36:52,145 INFO line:71 - step: 1730, train_loss = 0.2471493603852038
+2023-02-13 17:37:14,655 INFO line:71 - step: 1740, train_loss = 0.24884196814601606
+2023-02-13 17:37:37,159 INFO line:71 - step: 1750, train_loss = 0.2576994905149051
+2023-02-13 17:37:59,670 INFO line:71 - step: 1760, train_loss = 0.26580940059081637
+2023-02-13 17:38:22,161 INFO line:71 - step: 1770, train_loss = 0.24875840068723112
+2023-02-13 17:38:44,687 INFO line:71 - step: 1780, train_loss = 0.24250467361569114
+2023-02-13 17:39:07,220 INFO line:71 - step: 1790, train_loss = 0.2616149062568437
+2023-02-13 17:39:29,760 INFO line:71 - step: 1800, train_loss = 0.2581530483437645
+2023-02-13 17:39:29,760 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:39:30,445 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6905375970656441
+2023-02-13 17:39:52,970 INFO line:71 - step: 1810, train_loss = 0.2628707806309439
+2023-02-13 17:40:15,539 INFO line:71 - step: 1820, train_loss = 0.23813714118739346
+2023-02-13 17:40:38,046 INFO line:71 - step: 1830, train_loss = 0.23492150082535784
+2023-02-13 17:41:00,545 INFO line:71 - step: 1840, train_loss = 0.25227237631267907
+2023-02-13 17:41:23,070 INFO line:71 - step: 1850, train_loss = 0.23213578087939624
+2023-02-13 17:41:45,600 INFO line:71 - step: 1860, train_loss = 0.25665701623298964
+2023-02-13 17:42:08,111 INFO line:71 - step: 1870, train_loss = 0.25114656989027206
+2023-02-13 17:42:30,600 INFO line:71 - step: 1880, train_loss = 0.25822634781219367
+2023-02-13 17:42:53,111 INFO line:71 - step: 1890, train_loss = 0.25388795611114595
+2023-02-13 17:43:15,605 INFO line:71 - step: 1900, train_loss = 0.24867068678856458
+2023-02-13 17:43:15,605 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:43:16,287 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5567788807519097
+2023-02-13 17:43:38,788 INFO line:71 - step: 1910, train_loss = 0.23442668854325546
+2023-02-13 17:44:01,279 INFO line:71 - step: 1920, train_loss = 0.23428459920817457
+2023-02-13 17:44:23,764 INFO line:71 - step: 1930, train_loss = 0.23358716653459596
+2023-02-13 17:44:46,262 INFO line:71 - step: 1940, train_loss = 0.2467196063931009
+2023-02-13 17:45:08,781 INFO line:71 - step: 1950, train_loss = 0.24586862213855148
+2023-02-13 17:45:31,319 INFO line:71 - step: 1960, train_loss = 0.26100913942174436
+2023-02-13 17:45:53,863 INFO line:71 - step: 1970, train_loss = 0.24295069429066193
+2023-02-13 17:46:16,401 INFO line:71 - step: 1980, train_loss = 0.22854458307342368
+2023-02-13 17:46:38,926 INFO line:71 - step: 1990, train_loss = 0.2588808223296134
+2023-02-13 17:47:01,486 INFO line:71 - step: 2000, train_loss = 0.21389346879271506
+2023-02-13 17:47:01,486 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:47:02,174 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.666348555356803
+2023-02-13 17:47:24,701 INFO line:71 - step: 2010, train_loss = 0.2502162477899868
+2023-02-13 17:47:47,239 INFO line:71 - step: 2020, train_loss = 0.24595698840066488
+2023-02-13 17:48:09,759 INFO line:71 - step: 2030, train_loss = 0.23432542926706446
+2023-02-13 17:48:32,268 INFO line:71 - step: 2040, train_loss = 0.24355032296381926
+2023-02-13 17:48:54,804 INFO line:71 - step: 2050, train_loss = 0.2585330135520349
+2023-02-13 17:49:17,319 INFO line:71 - step: 2060, train_loss = 0.24877483486052268
+2023-02-13 17:49:39,878 INFO line:71 - step: 2070, train_loss = 0.24547507606341218
+2023-02-13 17:50:02,439 INFO line:71 - step: 2080, train_loss = 0.25137345116350074
+2023-02-13 17:50:24,979 INFO line:71 - step: 2090, train_loss = 0.236327119265408
+2023-02-13 17:50:47,501 INFO line:71 - step: 2100, train_loss = 0.24487355920735593
+2023-02-13 17:50:47,501 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:50:48,187 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7440252819704922
+2023-02-13 17:51:10,714 INFO line:71 - step: 2110, train_loss = 0.2596572198458392
+2023-02-13 17:51:33,226 INFO line:71 - step: 2120, train_loss = 0.228652523454472
+2023-02-13 17:51:55,763 INFO line:71 - step: 2130, train_loss = 0.2522482989272144
+2023-02-13 17:52:18,290 INFO line:71 - step: 2140, train_loss = 0.23680576918292368
+2023-02-13 17:52:40,841 INFO line:71 - step: 2150, train_loss = 0.23215199223682595
+2023-02-13 17:53:03,453 INFO line:71 - step: 2160, train_loss = 0.2275014384569618
+2023-02-13 17:53:25,979 INFO line:71 - step: 2170, train_loss = 0.23795992447875497
+2023-02-13 17:53:48,542 INFO line:71 - step: 2180, train_loss = 0.25571246613471865
+2023-02-13 17:54:11,063 INFO line:71 - step: 2190, train_loss = 0.24177726639078986
+2023-02-13 17:54:33,595 INFO line:71 - step: 2200, train_loss = 0.24271683735385005
+2023-02-13 17:54:33,595 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:54:34,280 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7030083548842693
+2023-02-13 17:54:56,790 INFO line:71 - step: 2210, train_loss = 0.2391653254294741
+2023-02-13 17:55:19,321 INFO line:71 - step: 2220, train_loss = 0.2310557504203743
+2023-02-13 17:55:41,851 INFO line:71 - step: 2230, train_loss = 0.2484789768580528
+2023-02-13 17:56:04,370 INFO line:71 - step: 2240, train_loss = 0.2450196195461427
+2023-02-13 17:56:26,913 INFO line:71 - step: 2250, train_loss = 0.24927332239341812
+2023-02-13 17:56:49,449 INFO line:71 - step: 2260, train_loss = 0.21837127583695448
+2023-02-13 17:57:11,973 INFO line:71 - step: 2270, train_loss = 0.23538504998713652
+2023-02-13 17:57:34,478 INFO line:71 - step: 2280, train_loss = 0.24190316454020086
+2023-02-13 17:57:57,046 INFO line:71 - step: 2290, train_loss = 0.22495169878092836
+2023-02-13 17:58:19,596 INFO line:71 - step: 2300, train_loss = 0.2365845027147459
+2023-02-13 17:58:19,597 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 17:58:20,283 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5081224279833352
+2023-02-13 17:58:42,851 INFO line:71 - step: 2310, train_loss = 0.22412272189960944
+2023-02-13 17:59:05,410 INFO line:71 - step: 2320, train_loss = 0.23852864999067247
+2023-02-13 17:59:27,937 INFO line:71 - step: 2330, train_loss = 0.2493109482490743
+2023-02-13 17:59:50,472 INFO line:71 - step: 2340, train_loss = 0.23832200745358484
+2023-02-13 18:00:12,969 INFO line:71 - step: 2350, train_loss = 0.24778837406843998
+2023-02-13 18:00:35,476 INFO line:71 - step: 2360, train_loss = 0.23968746047036368
+2023-02-13 18:00:58,030 INFO line:71 - step: 2370, train_loss = 0.22656358418916925
+2023-02-13 18:01:20,553 INFO line:71 - step: 2380, train_loss = 0.2588896229336841
+2023-02-13 18:01:43,067 INFO line:71 - step: 2390, train_loss = 0.2750855724056258
+2023-02-13 18:02:05,596 INFO line:71 - step: 2400, train_loss = 0.25996239189972675
+2023-02-13 18:02:05,596 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:02:06,278 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6789056417829105
+2023-02-13 18:02:28,773 INFO line:71 - step: 2410, train_loss = 0.26643496031888175
+2023-02-13 18:02:51,259 INFO line:71 - step: 2420, train_loss = 0.2564295711217395
+2023-02-13 18:03:13,753 INFO line:71 - step: 2430, train_loss = 0.24693966577242063
+2023-02-13 18:03:36,234 INFO line:71 - step: 2440, train_loss = 0.24902532885146011
+2023-02-13 18:03:58,743 INFO line:71 - step: 2450, train_loss = 0.22805022478043266
+2023-02-13 18:04:21,226 INFO line:71 - step: 2460, train_loss = 0.24836425035775384
+2023-02-13 18:04:43,712 INFO line:71 - step: 2470, train_loss = 0.2498119263663554
+2023-02-13 18:05:06,196 INFO line:71 - step: 2480, train_loss = 0.2345527642682093
+2023-02-13 18:05:28,685 INFO line:71 - step: 2490, train_loss = 0.2618510077349975
+2023-02-13 18:05:51,193 INFO line:71 - step: 2500, train_loss = 0.239462690799119
+2023-02-13 18:05:51,193 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:05:51,878 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7688934838321722
+2023-02-13 18:06:14,364 INFO line:71 - step: 2510, train_loss = 0.256146744290484
+2023-02-13 18:06:36,860 INFO line:71 - step: 2520, train_loss = 0.2550724345623397
+2023-02-13 18:06:59,347 INFO line:71 - step: 2530, train_loss = 0.24652831484707818
+2023-02-13 18:07:21,848 INFO line:71 - step: 2540, train_loss = 0.2490228464517597
+2023-02-13 18:07:44,341 INFO line:71 - step: 2550, train_loss = 0.23970872079014968
+2023-02-13 18:08:06,823 INFO line:71 - step: 2560, train_loss = 0.2500488320148736
+2023-02-13 18:08:29,304 INFO line:71 - step: 2570, train_loss = 0.2514940577702394
+2023-02-13 18:08:51,799 INFO line:71 - step: 2580, train_loss = 0.225266179897389
+2023-02-13 18:09:14,286 INFO line:71 - step: 2590, train_loss = 0.25027019117180677
+2023-02-13 18:09:36,790 INFO line:71 - step: 2600, train_loss = 0.25451339554256597
+2023-02-13 18:09:36,790 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:09:37,484 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6758419433845197
+2023-02-13 18:10:00,000 INFO line:71 - step: 2610, train_loss = 0.24578070269212926
+2023-02-13 18:10:22,525 INFO line:71 - step: 2620, train_loss = 0.23978537599577138
+2023-02-13 18:10:45,034 INFO line:71 - step: 2630, train_loss = 0.2560153083513347
+2023-02-13 18:11:07,528 INFO line:71 - step: 2640, train_loss = 0.2452899829762598
+2023-02-13 18:11:30,028 INFO line:71 - step: 2650, train_loss = 0.23777536047973125
+2023-02-13 18:11:52,536 INFO line:71 - step: 2660, train_loss = 0.26059964825338855
+2023-02-13 18:12:15,050 INFO line:71 - step: 2670, train_loss = 0.22484000878312815
+2023-02-13 18:12:37,582 INFO line:71 - step: 2680, train_loss = 0.24433698547356658
+2023-02-13 18:13:00,098 INFO line:71 - step: 2690, train_loss = 0.24543962676388803
+2023-02-13 18:13:22,628 INFO line:71 - step: 2700, train_loss = 0.23203188141575581
+2023-02-13 18:13:22,628 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:13:23,319 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6958037744999286
+2023-02-13 18:13:45,827 INFO line:71 - step: 2710, train_loss = 0.229079457395918
+2023-02-13 18:14:08,360 INFO line:71 - step: 2720, train_loss = 0.2616438200540826
+2023-02-13 18:14:30,859 INFO line:71 - step: 2730, train_loss = 0.2567233558902559
+2023-02-13 18:14:53,348 INFO line:71 - step: 2740, train_loss = 0.24492881505794745
+2023-02-13 18:15:15,870 INFO line:71 - step: 2750, train_loss = 0.2522571788496062
+2023-02-13 18:15:38,489 INFO line:71 - step: 2760, train_loss = 0.24262494759234515
+2023-02-13 18:16:01,006 INFO line:71 - step: 2770, train_loss = 0.26475512283732566
+2023-02-13 18:16:23,512 INFO line:71 - step: 2780, train_loss = 0.23426305124967697
+2023-02-13 18:16:46,033 INFO line:71 - step: 2790, train_loss = 0.2298342488606409
+2023-02-13 18:17:08,627 INFO line:71 - step: 2800, train_loss = 0.2339866107757611
+2023-02-13 18:17:08,627 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:17:09,307 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5288718572855405
+2023-02-13 18:17:31,816 INFO line:71 - step: 2810, train_loss = 0.23616740798026314
+2023-02-13 18:17:54,348 INFO line:71 - step: 2820, train_loss = 0.2454454129169704
+2023-02-13 18:18:16,892 INFO line:71 - step: 2830, train_loss = 0.21859488357194792
+2023-02-13 18:18:39,397 INFO line:71 - step: 2840, train_loss = 0.25031319827324905
+2023-02-13 18:19:01,940 INFO line:71 - step: 2850, train_loss = 0.2531689319042182
+2023-02-13 18:19:24,470 INFO line:71 - step: 2860, train_loss = 0.23882257568547938
+2023-02-13 18:19:46,988 INFO line:71 - step: 2870, train_loss = 0.2538022082957573
+2023-02-13 18:20:09,505 INFO line:71 - step: 2880, train_loss = 0.2482447806120959
+2023-02-13 18:20:32,054 INFO line:71 - step: 2890, train_loss = 0.23714608868293588
+2023-02-13 18:20:54,592 INFO line:71 - step: 2900, train_loss = 0.23712820847969054
+2023-02-13 18:20:54,592 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:20:55,277 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7016530881816359
+2023-02-13 18:21:17,792 INFO line:71 - step: 2910, train_loss = 0.20728376695271006
+2023-02-13 18:21:40,353 INFO line:71 - step: 2920, train_loss = 0.2471868255866748
+2023-02-13 18:22:02,905 INFO line:71 - step: 2930, train_loss = 0.23203025088269874
+2023-02-13 18:22:25,461 INFO line:71 - step: 2940, train_loss = 0.24294092160645478
+2023-02-13 18:22:47,999 INFO line:71 - step: 2950, train_loss = 0.2383607031124873
+2023-02-13 18:23:10,537 INFO line:71 - step: 2960, train_loss = 0.23095752325009739
+2023-02-13 18:23:33,048 INFO line:71 - step: 2970, train_loss = 0.23292862682752924
+2023-02-13 18:23:55,621 INFO line:71 - step: 2980, train_loss = 0.26169712133659934
+2023-02-13 18:24:18,176 INFO line:71 - step: 2990, train_loss = 0.22323957564481284
+2023-02-13 18:24:40,778 INFO line:71 - step: 3000, train_loss = 0.22073831209248734
+2023-02-13 18:24:40,778 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:24:41,464 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.573311717571453
+2023-02-13 18:25:04,076 INFO line:71 - step: 3010, train_loss = 0.24556153412860734
+2023-02-13 18:25:26,637 INFO line:71 - step: 3020, train_loss = 0.22177517151579482
+2023-02-13 18:25:49,290 INFO line:71 - step: 3030, train_loss = 0.25934428464809145
+2023-02-13 18:26:11,807 INFO line:71 - step: 3040, train_loss = 0.24048277978595825
+2023-02-13 18:26:34,376 INFO line:71 - step: 3050, train_loss = 0.23139683308466807
+2023-02-13 18:26:56,940 INFO line:71 - step: 3060, train_loss = 0.22868953641299622
+2023-02-13 18:27:19,526 INFO line:71 - step: 3070, train_loss = 0.23913851033208083
+2023-02-13 18:27:42,085 INFO line:71 - step: 3080, train_loss = 0.23997679622351029
+2023-02-13 18:28:04,643 INFO line:71 - step: 3090, train_loss = 0.24152687902408224
+2023-02-13 18:28:27,186 INFO line:71 - step: 3100, train_loss = 0.24107886167956058
+2023-02-13 18:28:27,187 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:28:27,868 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.4804160025694425
+2023-02-13 18:28:50,424 INFO line:71 - step: 3110, train_loss = 0.2369855553294687
+2023-02-13 18:29:12,941 INFO line:71 - step: 3120, train_loss = 0.22909434739455095
+2023-02-13 18:29:35,494 INFO line:71 - step: 3130, train_loss = 0.24294342845613381
+2023-02-13 18:29:58,048 INFO line:71 - step: 3140, train_loss = 0.2416349891262425
+2023-02-13 18:30:20,599 INFO line:71 - step: 3150, train_loss = 0.2253578516228949
+2023-02-13 18:30:43,099 INFO line:71 - step: 3160, train_loss = 0.23055628521253016
+2023-02-13 18:31:05,660 INFO line:71 - step: 3170, train_loss = 0.27287007154774995
+2023-02-13 18:31:28,206 INFO line:71 - step: 3180, train_loss = 0.2527966317905701
+2023-02-13 18:31:50,760 INFO line:71 - step: 3190, train_loss = 0.2643258069617632
+2023-02-13 18:32:13,323 INFO line:71 - step: 3200, train_loss = 0.2707257875892298
+2023-02-13 18:32:13,324 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:32:14,010 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.761975521877368
+2023-02-13 18:32:36,576 INFO line:71 - step: 3210, train_loss = 0.24939453975128228
+2023-02-13 18:32:59,130 INFO line:71 - step: 3220, train_loss = 0.2669175238054958
+2023-02-13 18:33:21,690 INFO line:71 - step: 3230, train_loss = 0.25182120141442627
+2023-02-13 18:33:44,233 INFO line:71 - step: 3240, train_loss = 0.2207990537394028
+2023-02-13 18:34:06,789 INFO line:71 - step: 3250, train_loss = 0.2347171712595954
+2023-02-13 18:34:29,369 INFO line:71 - step: 3260, train_loss = 0.2274898357683349
+2023-02-13 18:34:51,919 INFO line:71 - step: 3270, train_loss = 0.23231517644676689
+2023-02-13 18:35:14,425 INFO line:71 - step: 3280, train_loss = 0.2560642483842921
+2023-02-13 18:35:36,985 INFO line:71 - step: 3290, train_loss = 0.24164750947940133
+2023-02-13 18:35:59,707 INFO line:71 - step: 3300, train_loss = 0.252325986531159
+2023-02-13 18:35:59,707 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:36:00,395 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.583628558690346
+2023-02-13 18:36:23,006 INFO line:71 - step: 3310, train_loss = 0.24356113492871242
+2023-02-13 18:36:45,630 INFO line:71 - step: 3320, train_loss = 0.23297791546385804
+2023-02-13 18:37:08,256 INFO line:71 - step: 3330, train_loss = 0.2396580435849225
+2023-02-13 18:37:30,882 INFO line:71 - step: 3340, train_loss = 0.24661819899569437
+2023-02-13 18:37:53,594 INFO line:71 - step: 3350, train_loss = 0.23905676524078948
+2023-02-13 18:38:16,238 INFO line:71 - step: 3360, train_loss = 0.22824513542993735
+2023-02-13 18:38:38,976 INFO line:71 - step: 3370, train_loss = 0.259863075192874
+2023-02-13 18:39:01,680 INFO line:71 - step: 3380, train_loss = 0.2488050543841586
+2023-02-13 18:39:24,338 INFO line:71 - step: 3390, train_loss = 0.25332081075854307
+2023-02-13 18:39:47,014 INFO line:71 - step: 3400, train_loss = 0.26644341052542747
+2023-02-13 18:39:47,014 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:39:47,694 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5952357416128223
+2023-02-13 18:40:10,434 INFO line:71 - step: 3410, train_loss = 0.2751518988369367
+2023-02-13 18:40:33,087 INFO line:71 - step: 3420, train_loss = 0.27165685365380143
+2023-02-13 18:40:55,778 INFO line:71 - step: 3430, train_loss = 0.2530162923652205
+2023-02-13 18:41:18,467 INFO line:71 - step: 3440, train_loss = 0.24177827430118617
+2023-02-13 18:41:41,137 INFO line:71 - step: 3450, train_loss = 0.2634621081208363
+2023-02-13 18:42:03,872 INFO line:71 - step: 3460, train_loss = 0.2393423344095682
+2023-02-13 18:42:26,589 INFO line:71 - step: 3470, train_loss = 0.24984429390028548
+2023-02-13 18:42:49,251 INFO line:71 - step: 3480, train_loss = 0.24513742367511276
+2023-02-13 18:43:11,929 INFO line:71 - step: 3490, train_loss = 0.2421443056106764
+2023-02-13 18:43:34,611 INFO line:71 - step: 3500, train_loss = 0.2467572028967952
+2023-02-13 18:43:34,611 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:43:35,290 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.4827874657695709
+2023-02-13 18:43:57,936 INFO line:71 - step: 3510, train_loss = 0.2370590505303749
+2023-02-13 18:44:20,656 INFO line:71 - step: 3520, train_loss = 0.24733524289129213
+2023-02-13 18:44:43,397 INFO line:71 - step: 3530, train_loss = 0.2450630125194178
+2023-02-13 18:45:06,163 INFO line:71 - step: 3540, train_loss = 0.255097949591445
+2023-02-13 18:45:28,871 INFO line:71 - step: 3550, train_loss = 0.25072013683907063
+2023-02-13 18:45:51,615 INFO line:71 - step: 3560, train_loss = 0.24979316125594425
+2023-02-13 18:46:14,359 INFO line:71 - step: 3570, train_loss = 0.26633101683176297
+2023-02-13 18:46:37,035 INFO line:71 - step: 3580, train_loss = 0.24509668839361462
+2023-02-13 18:46:59,708 INFO line:71 - step: 3590, train_loss = 0.24587983013856302
+2023-02-13 18:47:22,366 INFO line:71 - step: 3600, train_loss = 0.26063325766115375
+2023-02-13 18:47:22,366 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:47:23,048 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5688307329289644
+2023-02-13 18:47:45,742 INFO line:71 - step: 3610, train_loss = 0.23581388619662005
+2023-02-13 18:48:08,419 INFO line:71 - step: 3620, train_loss = 0.23966644849401297
+2023-02-13 18:48:31,074 INFO line:71 - step: 3630, train_loss = 0.23859885484863277
+2023-02-13 18:48:53,754 INFO line:71 - step: 3640, train_loss = 0.22970770133546528
+2023-02-13 18:49:16,472 INFO line:71 - step: 3650, train_loss = 0.24016861488888677
+2023-02-13 18:49:39,120 INFO line:71 - step: 3660, train_loss = 0.2559480143962138
+2023-02-13 18:50:01,822 INFO line:71 - step: 3670, train_loss = 0.2302258038891633
+2023-02-13 18:50:24,492 INFO line:71 - step: 3680, train_loss = 0.2582399611023026
+2023-02-13 18:50:47,157 INFO line:71 - step: 3690, train_loss = 0.23259425633434958
+2023-02-13 18:51:09,861 INFO line:71 - step: 3700, train_loss = 0.2329293951952341
+2023-02-13 18:51:09,861 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:51:10,543 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.523623117852438
+2023-02-13 18:51:33,183 INFO line:71 - step: 3710, train_loss = 0.22733653371649373
+2023-02-13 18:51:55,860 INFO line:71 - step: 3720, train_loss = 0.22301282932121147
+2023-02-13 18:52:18,547 INFO line:71 - step: 3730, train_loss = 0.24573623935761066
+2023-02-13 18:52:41,243 INFO line:71 - step: 3740, train_loss = 0.26075029901396984
+2023-02-13 18:53:03,907 INFO line:71 - step: 3750, train_loss = 0.25046123331539316
+2023-02-13 18:53:26,564 INFO line:71 - step: 3760, train_loss = 0.23730198651643084
+2023-02-13 18:53:49,244 INFO line:71 - step: 3770, train_loss = 0.2590227655628387
+2023-02-13 18:54:11,914 INFO line:71 - step: 3780, train_loss = 0.24811527465914293
+2023-02-13 18:54:34,520 INFO line:71 - step: 3790, train_loss = 0.24415867735314492
+2023-02-13 18:54:57,110 INFO line:71 - step: 3800, train_loss = 0.2484101723531892
+2023-02-13 18:54:57,110 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:54:57,797 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5178557378590456
+2023-02-13 18:55:20,418 INFO line:71 - step: 3810, train_loss = 0.2589401788832776
+2023-02-13 18:55:43,055 INFO line:71 - step: 3820, train_loss = 0.23322755697025593
+2023-02-13 18:56:05,676 INFO line:71 - step: 3830, train_loss = 0.25296376426615363
+2023-02-13 18:56:28,308 INFO line:71 - step: 3840, train_loss = 0.2562012103487951
+2023-02-13 18:56:50,917 INFO line:71 - step: 3850, train_loss = 0.24018149625026802
+2023-02-13 18:57:13,557 INFO line:71 - step: 3860, train_loss = 0.2477209358336257
+2023-02-13 18:57:36,196 INFO line:71 - step: 3870, train_loss = 0.22866819547263045
+2023-02-13 18:57:58,793 INFO line:71 - step: 3880, train_loss = 0.23115491380856076
+2023-02-13 18:58:21,404 INFO line:71 - step: 3890, train_loss = 0.24061143710442687
+2023-02-13 18:58:44,019 INFO line:71 - step: 3900, train_loss = 0.2333169223496409
+2023-02-13 18:58:44,019 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 18:58:44,709 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.523698761415314
+2023-02-13 18:59:07,338 INFO line:71 - step: 3910, train_loss = 0.22177962016800584
+2023-02-13 18:59:29,927 INFO line:71 - step: 3920, train_loss = 0.24434455929011603
+2023-02-13 18:59:52,607 INFO line:71 - step: 3930, train_loss = 0.23679865431554775
+2023-02-13 19:00:15,250 INFO line:71 - step: 3940, train_loss = 0.2419970407251104
+2023-02-13 19:00:37,904 INFO line:71 - step: 3950, train_loss = 0.23528575258965723
+2023-02-13 19:01:00,527 INFO line:71 - step: 3960, train_loss = 0.23647883353292348
+2023-02-13 19:01:23,312 INFO line:71 - step: 3970, train_loss = 0.21252486950355332
+2023-02-13 19:01:45,923 INFO line:71 - step: 3980, train_loss = 0.2263181270295566
+2023-02-13 19:02:08,488 INFO line:71 - step: 3990, train_loss = 0.24200008640023443
+2023-02-13 19:02:31,096 INFO line:71 - step: 4000, train_loss = 0.24149408284755988
+2023-02-13 19:02:31,096 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:02:31,779 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5995632074898739
+2023-02-13 19:02:54,364 INFO line:71 - step: 4010, train_loss = 0.24308016757674394
+2023-02-13 19:03:17,023 INFO line:71 - step: 4020, train_loss = 0.23033598000354752
+2023-02-13 19:03:39,589 INFO line:71 - step: 4030, train_loss = 0.24019545225676858
+2023-02-13 19:04:02,180 INFO line:71 - step: 4040, train_loss = 0.23699971099597456
+2023-02-13 19:04:24,760 INFO line:71 - step: 4050, train_loss = 0.22119569754132634
+2023-02-13 19:04:47,333 INFO line:71 - step: 4060, train_loss = 0.23352717673170637
+2023-02-13 19:05:09,900 INFO line:71 - step: 4070, train_loss = 0.24938033774633078
+2023-02-13 19:05:32,466 INFO line:71 - step: 4080, train_loss = 0.24039474084840182
+2023-02-13 19:05:54,958 INFO line:71 - step: 4090, train_loss = 0.23857644718382515
+2023-02-13 19:06:17,517 INFO line:71 - step: 4100, train_loss = 0.20261827192539697
+2023-02-13 19:06:17,518 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:06:18,197 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.7157192713823295
+2023-02-13 19:06:40,740 INFO line:71 - step: 4110, train_loss = 0.2552431871282911
+2023-02-13 19:07:03,281 INFO line:71 - step: 4120, train_loss = 0.22689968261708415
+2023-02-13 19:07:25,874 INFO line:71 - step: 4130, train_loss = 0.24382916824743925
+2023-02-13 19:07:48,422 INFO line:71 - step: 4140, train_loss = 0.23084703176827442
+2023-02-13 19:08:11,007 INFO line:71 - step: 4150, train_loss = 0.24537434055506463
+2023-02-13 19:08:33,575 INFO line:71 - step: 4160, train_loss = 0.22683204800106246
+2023-02-13 19:08:56,154 INFO line:71 - step: 4170, train_loss = 0.2259504181905098
+2023-02-13 19:09:18,740 INFO line:71 - step: 4180, train_loss = 0.23343142553477128
+2023-02-13 19:09:41,369 INFO line:71 - step: 4190, train_loss = 0.2146501554348128
+2023-02-13 19:10:03,935 INFO line:71 - step: 4200, train_loss = 0.22425877463700558
+2023-02-13 19:10:03,935 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:10:04,616 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6364010975731471
+2023-02-13 19:10:24,641 INFO line:71 - step: 4210, train_loss = 0.2435812492094199
+2023-02-13 19:10:41,012 INFO line:71 - step: 4220, train_loss = 0.24702811829232413
+2023-02-13 19:10:57,353 INFO line:71 - step: 4230, train_loss = 0.24066497620887733
+2023-02-13 19:11:13,721 INFO line:71 - step: 4240, train_loss = 0.2584867073640691
+2023-02-13 19:11:30,072 INFO line:71 - step: 4250, train_loss = 0.2157943950235321
+2023-02-13 19:11:46,392 INFO line:71 - step: 4260, train_loss = 0.25567821801448604
+2023-02-13 19:12:02,688 INFO line:71 - step: 4270, train_loss = 0.25109987000526185
+2023-02-13 19:12:18,912 INFO line:71 - step: 4280, train_loss = 0.23213631568980095
+2023-02-13 19:12:34,608 INFO line:71 - step: 4290, train_loss = 0.23794545762332206
+2023-02-13 19:12:50,038 INFO line:71 - step: 4300, train_loss = 0.2446599456677867
+2023-02-13 19:12:50,038 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:12:50,523 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5671235392106645
+2023-02-13 19:13:05,929 INFO line:71 - step: 4310, train_loss = 0.23185182965881132
+2023-02-13 19:13:21,335 INFO line:71 - step: 4320, train_loss = 0.23697540099401615
+2023-02-13 19:13:36,733 INFO line:71 - step: 4330, train_loss = 0.22343892925790235
+2023-02-13 19:13:52,122 INFO line:71 - step: 4340, train_loss = 0.22253421144397625
+2023-02-13 19:14:07,499 INFO line:71 - step: 4350, train_loss = 0.23177645402722175
+2023-02-13 19:14:22,894 INFO line:71 - step: 4360, train_loss = 0.2651344317610962
+2023-02-13 19:14:38,280 INFO line:71 - step: 4370, train_loss = 0.29304079272697015
+2023-02-13 19:14:53,663 INFO line:71 - step: 4380, train_loss = 0.25772139139119843
+2023-02-13 19:15:09,033 INFO line:71 - step: 4390, train_loss = 0.26430021444007396
+2023-02-13 19:15:24,430 INFO line:71 - step: 4400, train_loss = 0.24242346106982696
+2023-02-13 19:15:24,430 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:15:24,912 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.6294564476773689
+2023-02-13 19:15:40,329 INFO line:71 - step: 4410, train_loss = 0.26090180082522024
+2023-02-13 19:15:55,743 INFO line:71 - step: 4420, train_loss = 0.2523480823578884
+2023-02-13 19:16:11,159 INFO line:71 - step: 4430, train_loss = 0.2455377035522269
+2023-02-13 19:16:26,546 INFO line:71 - step: 4440, train_loss = 0.23959043517430173
+2023-02-13 19:16:41,951 INFO line:71 - step: 4450, train_loss = 0.23739091373096763
+2023-02-13 19:16:57,363 INFO line:71 - step: 4460, train_loss = 0.23003650803567077
+2023-02-13 19:17:12,769 INFO line:71 - step: 4470, train_loss = 0.23453341698949384
+2023-02-13 19:17:28,176 INFO line:71 - step: 4480, train_loss = 0.22981771284898275
+2023-02-13 19:17:46,607 INFO line:71 - step: 4490, train_loss = 0.23429529955907458
+2023-02-13 19:18:07,993 INFO line:71 - step: 4500, train_loss = 0.23177579184758584
+2023-02-13 19:18:07,993 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:18:08,655 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.597962799261675
+2023-02-13 19:18:30,016 INFO line:71 - step: 4510, train_loss = 0.24764255724896128
+2023-02-13 19:18:51,394 INFO line:71 - step: 4520, train_loss = 0.2360411707941068
+2023-02-13 19:19:12,765 INFO line:71 - step: 4530, train_loss = 0.2559719525817677
+2023-02-13 19:19:34,136 INFO line:71 - step: 4540, train_loss = 0.24283010645095265
+2023-02-13 19:19:55,530 INFO line:71 - step: 4550, train_loss = 0.23539665025667972
+2023-02-13 19:20:16,938 INFO line:71 - step: 4560, train_loss = 0.24448129465538276
+2023-02-13 19:20:38,385 INFO line:71 - step: 4570, train_loss = 0.2345531946928575
+2023-02-13 19:20:59,695 INFO line:71 - step: 4580, train_loss = 0.2493260436286286
+2023-02-13 19:21:20,988 INFO line:71 - step: 4590, train_loss = 0.2322928978885374
+2023-02-13 19:21:42,307 INFO line:71 - step: 4600, train_loss = 0.2232080918697524
+2023-02-13 19:21:42,308 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:21:42,966 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5499256488353532
+2023-02-13 19:22:04,352 INFO line:71 - step: 4610, train_loss = 0.2637462840046788
+2023-02-13 19:22:25,693 INFO line:71 - step: 4620, train_loss = 0.22929844600749044
+2023-02-13 19:22:47,003 INFO line:71 - step: 4630, train_loss = 0.23543555909640093
+2023-02-13 19:23:08,368 INFO line:71 - step: 4640, train_loss = 0.22671237255703022
+2023-02-13 19:23:29,694 INFO line:71 - step: 4650, train_loss = 0.23804352240143684
+2023-02-13 19:23:45,690 INFO line:71 - step: 4660, train_loss = 0.22127320857081903
+2023-02-13 19:24:01,054 INFO line:71 - step: 4670, train_loss = 0.23119308925522639
+2023-02-13 19:24:16,422 INFO line:71 - step: 4680, train_loss = 0.23978948207629033
+2023-02-13 19:24:31,793 INFO line:71 - step: 4690, train_loss = 0.24449910694648266
+2023-02-13 19:24:47,168 INFO line:71 - step: 4700, train_loss = 0.22985297217312678
+2023-02-13 19:24:47,168 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:24:47,657 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5647236166979404
+2023-02-13 19:25:03,046 INFO line:71 - step: 4710, train_loss = 0.22023210014641226
+2023-02-13 19:25:18,443 INFO line:71 - step: 4720, train_loss = 0.23222738831203657
+2023-02-13 19:25:33,835 INFO line:71 - step: 4730, train_loss = 0.23544609976494213
+2023-02-13 19:25:49,211 INFO line:71 - step: 4740, train_loss = 0.25026685509824714
+2023-02-13 19:26:04,606 INFO line:71 - step: 4750, train_loss = 0.23677432479245336
+2023-02-13 19:26:19,992 INFO line:71 - step: 4760, train_loss = 0.20428669913940145
+2023-02-13 19:26:35,383 INFO line:71 - step: 4770, train_loss = 0.23428111209943472
+2023-02-13 19:26:53,502 INFO line:71 - step: 4780, train_loss = 0.22825874832024345
+2023-02-13 19:27:14,829 INFO line:71 - step: 4790, train_loss = 0.22921853787815763
+2023-02-13 19:27:36,163 INFO line:71 - step: 4800, train_loss = 0.24985069165819343
+2023-02-13 19:27:36,164 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:27:36,824 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5214273370167825
+2023-02-13 19:27:58,157 INFO line:71 - step: 4810, train_loss = 0.23894637009013348
+2023-02-13 19:28:19,472 INFO line:71 - step: 4820, train_loss = 0.23359507777092015
+2023-02-13 19:28:40,776 INFO line:71 - step: 4830, train_loss = 0.20938148837845838
+2023-02-13 19:29:02,081 INFO line:71 - step: 4840, train_loss = 0.24709177425378356
+2023-02-13 19:29:23,438 INFO line:71 - step: 4850, train_loss = 0.21761123386006326
+2023-02-13 19:29:44,783 INFO line:71 - step: 4860, train_loss = 0.2298976451494555
+2023-02-13 19:30:06,140 INFO line:71 - step: 4870, train_loss = 0.22746948029343242
+2023-02-13 19:30:27,488 INFO line:71 - step: 4880, train_loss = 0.22638196846670197
+2023-02-13 19:30:48,813 INFO line:71 - step: 4890, train_loss = 0.21582629933205486
+2023-02-13 19:31:10,195 INFO line:71 - step: 4900, train_loss = 0.22049138266755594
+2023-02-13 19:31:10,195 INFO line:78 -  ------ meta evaluating start ------ 
+2023-02-13 19:31:10,851 INFO line:92 - mean eval loss on 16 meta eval tasks = 0.5616050927004197
+2023-02-13 19:31:32,177 INFO line:71 - step: 4910, train_loss = 0.22486510907767018
+2023-02-13 19:31:53,492 INFO line:71 - step: 4920, train_loss = 0.21552089484321954
+2023-02-13 19:32:14,801 INFO line:71 - step: 4930, train_loss = 0.23513413273900138
+2023-02-13 19:32:36,138 INFO line:71 - step: 4940, train_loss = 0.24302962570644365
+2023-02-13 19:32:57,481 INFO line:71 - step: 4950, train_loss = 0.22017302977784287
+2023-02-13 19:33:18,846 INFO line:71 - step: 4960, train_loss = 0.24830751931512532
+2023-02-13 19:33:40,187 INFO line:71 - step: 4970, train_loss = 0.23744095663551304
+2023-02-13 19:34:01,527 INFO line:71 - step: 4980, train_loss = 0.23136576855153373
+2023-02-13 19:34:22,871 INFO line:71 - step: 4990, train_loss = 0.24571217647839388
+2023-02-13 19:34:42,284 INFO line:118 -  ------ meta testing start ------ 
+2023-02-13 19:34:42,320 INFO line:144 - test loss on meta test task(1) = 0.28442824941478545
+2023-02-13 19:34:42,352 INFO line:144 - test loss on meta test task(2) = 0.3689850940687611
+2023-02-13 19:34:42,402 INFO line:144 - test loss on meta test task(3) = 0.3812941571643243
+2023-02-13 19:34:42,443 INFO line:144 - test loss on meta test task(4) = 0.34278916600512727
+2023-02-13 19:34:42,484 INFO line:144 - test loss on meta test task(5) = 0.4776473937849799
+2023-02-13 19:34:42,525 INFO line:144 - test loss on meta test task(6) = 0.40597741422755923
+2023-02-13 19:34:42,567 INFO line:144 - test loss on meta test task(7) = 0.4124321025441136
+2023-02-13 19:34:42,608 INFO line:144 - test loss on meta test task(8) = 0.6358002745739783
+2023-02-13 19:34:42,649 INFO line:144 - test loss on meta test task(9) = 0.5669569903219911
+2023-02-13 19:34:42,690 INFO line:144 - test loss on meta test task(10) = 0.7255123984348606
+2023-02-13 19:34:42,731 INFO line:144 - test loss on meta test task(11) = 0.7058459962639096
+2023-02-13 19:34:42,772 INFO line:144 - test loss on meta test task(12) = 0.5907095667088482
+2023-02-13 19:34:42,814 INFO line:144 - test loss on meta test task(13) = 0.9045181665798062
+2023-02-13 19:34:42,855 INFO line:144 - test loss on meta test task(14) = 0.57494869606339
+2023-02-13 19:34:42,896 INFO line:144 - test loss on meta test task(15) = 0.552316853734226
+2023-02-13 19:34:42,937 INFO line:144 - test loss on meta test task(16) = 0.5628573258861752
+2023-02-13 19:34:42,937 INFO line:148 - mean test loss on 16 meta test tasks = 0.5308137403610522
